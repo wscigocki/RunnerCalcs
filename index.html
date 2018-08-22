@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr" ng-app="runnerCalcApp">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Calculators for runners</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="library/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+    <script src="RoutesConfig.js"></script>
+    <script src="controllers/PaceCalculatorController.js"></script>
+    <script src="controllers/DistanceCalculatorController.js"></script>
+
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron container">
+
+      <h1 class="display-4" >Kalkulatory dla biegaczy</h1>
+
+      <p class="lead">Przykładowe kalkulatory dla biegaczy, wybierz jeden z nich.</p>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Wybierz kalkulator
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" ui-sref="paceCalculator">Kalkulator tempa</a>
+          <a class="dropdown-item" ui-sref="distanceCalculator">Kalkulator dystansu</a>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="container">
+          <ui-view></ui-view>
+      </div>
+    </div>
+
+  </body>
+</html>
