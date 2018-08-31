@@ -1,13 +1,22 @@
-function PaceCalculatorController() {
+function PaceCalculatorController($log, calculatorService) {
   var ctrl = this;
 
   ctrl.name = "Kalkulator tempa";
   ctrl.distance = 10;
-  ctrl.time = new Date();
+  ctrl.hours = 2;
+  ctrl.minutes = 30;
   ctrl.peace = 0;
 
   ctrl.calculate = function () {
-    console.log(ctrl.time.getMinutes());
-    ctrl.peace = ctrl.time.getMinutes() / ctrl.distance ;
+
+    $log.log('ctrl.time = ' + ctrl.time );
+
+    var peace = calculatorService.calculatePeace(ctrl.time, ctrl.distance);
+    if (peace) {
+      ctrl.peace = peace;
+    }
+    else {
+      ctrl.peace = "?";
+    }
   }
 }
