@@ -1,4 +1,4 @@
-function PaceCalculatorController($log, calculatorService) {
+function PaceCalculatorController($log, calculatorService, timeService) {
   var ctrl = this;
 
   ctrl.name = "Kalkulator tempa";
@@ -12,7 +12,7 @@ function PaceCalculatorController($log, calculatorService) {
   ctrl.calculate = function () {
     var peace = calculatorService.calculatePeace(ctrl.totalSeconds, ctrl.distance);
     if (peace) {
-      ctrl.peace = peace;
+      ctrl.peace = timeService.getTime(peace);
     }
     else {
       ctrl.peace = "?";
