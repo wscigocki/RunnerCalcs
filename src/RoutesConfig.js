@@ -6,16 +6,14 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
 
   .state('paceCalculator', {
-    url: '/paceCalculator',
-    templateUrl: 'templates/paceCalculator.html',
+    url: 'paceCalculator',
+    templateUrl: 'src/templates/paceCalculator.html',
     controller: "paceCalculatorController as ctrl"
   })
 
   .state('distanceCalculator', {
     url: '/distanceCalculator',
-    templateUrl: 'templates/distanceCalculator.html',
+    templateUrl: 'src/templates/distanceCalculator.html',
     controller: "distanceCalculatorController as ctrl"
   });
-
-  console.log('ok');
 };

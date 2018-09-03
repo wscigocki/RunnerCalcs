@@ -1,5 +1,9 @@
-function CalculatorService() {
+function TimeService() {
   var service = this;
+
+  service.getTotalSeconds = function (hours, minuts, seconds) {
+    return hours * 60 * 60 + minuts * 60 + seconds;
+  }
 
   service.getTotalMinutes = function (time) {
     console.log(time);
@@ -11,11 +15,5 @@ function CalculatorService() {
     var minutes = (hours - rhours) * 60;
     var rminutes = Math.round(minutes);
     return rminutes + time.getMinutes();
-  }
-
-  service.calculatePeace = function(time, distance) {
-    var totalMinutes = service.getTotalMinutes(time);
-    console.log('totalMinutes ' + totalMinutes);
-    return time.getMinutes() / distance;
   }
 }
