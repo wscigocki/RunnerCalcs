@@ -19,9 +19,4 @@ function TimeService() {
     return rminutes + time.getMinutes();
   }
 
-  service.getTime = function (decimalMinutes) {
-    var seconds = Math.floor((decimalMinutes % 1) * 60);
-    var minutes = Math.floor(decimalMinutes);
-    return new Date(0,0,0,0,minutes,seconds);
-  }
 }

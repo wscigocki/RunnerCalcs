@@ -11,6 +11,10 @@ angular.module("runnerCalcApp", ["ui.router"])
 // services
 .service('calculatorService', CalculatorService)
 .service('timeService', TimeService)
+.service('stringService', StringService)
+
+// filters
+.filter('peace', PeaceFilterFactory)
 
 // components
 .component('timeCtrl', {
@@ -21,7 +25,6 @@ angular.module("runnerCalcApp", ["ui.router"])
       hours: '=',
       minutes: '=',
       seconds: '=',
-      totalSeconds: '=',
       onChange: '&'
   }
 });

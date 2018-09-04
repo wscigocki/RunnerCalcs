@@ -1,7 +1,7 @@
-<form width="200px">
-  <div class="form input-group input-group-sm mb-3 " width="50px">
-    <input id="hours" type="number" ng-change="$ctrl.calcTotal()" class="form-control" ng-model="$ctrl.hours" placeholder="godź."></input>:
-    <input id="minutes" type="number" ng-change="$ctrl.calcTotal()" class="form-control" ng-model="$ctrl.minutes" placeholder="min."></input>:
-    <input id="seconds" type="number" ng-change="$ctrl.calcTotal()" class="form-control" ng-model="$ctrl.seconds" placeholder="sec."></input>
+<form >
+  <div class="form-inline input-group input-group-sm mb-3 " >
+      <input id="hours" type="number" min="0"  ng-change="$ctrl.calcTotal()" class="form-control col-auto" ng-model="$ctrl.hours" placeholder="godź."></input>:
+      <input id="minutes" type="number" min="0" max="59" ng-change="$ctrl.calcTotal()" class="form-control col-auto" ng-model="$ctrl.minutes" placeholder="min."></input>:
+      <input id="seconds" type="number" min="0" max="59" ng-change="$ctrl.calcTotal()" class="form-control col-auto" ng-model="$ctrl.seconds" placeholder="sec."></input>
   </div>
 </form>

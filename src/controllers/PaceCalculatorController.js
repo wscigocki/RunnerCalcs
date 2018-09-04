@@ -11,11 +11,11 @@ function PaceCalculatorController($log, calculatorService, timeService) {
 
   ctrl.calculate = function () {
     var peace = calculatorService.calculatePeace(ctrl.totalSeconds, ctrl.distance);
-    if (peace) {
-      ctrl.peace = timeService.getTime(peace);
+    if (peace == undefined) {
+      ctrl.peace = "?";
     }
     else {
-      ctrl.peace = "?";
+      ctrl.peace = peace;
     }
   }
 
