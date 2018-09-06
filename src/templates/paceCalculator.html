@@ -3,7 +3,7 @@
 
   <div class="form-group">
     <label>Planowany dystans w km</label>
-    <input type="number" class="form-control"  ng-model="ctrl.distance" ng-change="ctrl.calculate()"></input>
+    <input type="number" class="form-control" ng-change="ctrl.onDistanseChange()"  ng-model="ctrl.distance" ng-change="ctrl.calculate()"></input>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Planowany czas biegu</label>
@@ -18,5 +18,9 @@
 
   <div class="form-group">
     Planowane tempo: {{ctrl.peace | peace}} min/km
+  </div>
+
+  <div class="form-group">
+    Planowana prędkość {{ctrl.speed | number:2}} km/godź
   </div>
 </div>
